@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geo & Water Lab</title>
+  <meta name="description" content="Search-based Geotechnical Engineering and Water Quality Monitoring laboratory manual.">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+:root{--ink:#13231f;--muted:#61706c;--line:#dfe8e4;--paper:#f6f8f5;--card:#fff;--accent:#0b6b57;--accent2:#c7e8dc;--gold:#c18b2e;--shadow:0 18px 50px rgba(22,45,38,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}button,input{font:inherit}.topbar{height:74px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;background:rgba(246,248,245,.9);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}.brand{display:flex;align-items:center;gap:11px;color:var(--ink);text-decoration:none;font-weight:700}.brand-mark{width:37px;height:37px;border-radius:11px;background:var(--accent);color:#fff;display:grid;place-items:center;font:700 13px "Space Grotesk"}.topbar nav{display:flex;gap:26px}.topbar nav a{color:var(--muted);text-decoration:none;font-size:14px}.hero{min-height:610px;padding:90px 9vw 80px;display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center;background:linear-gradient(145deg,#f7faf7,#e9f3ef)}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:700;color:var(--accent)}h1,h2,h3{font-family:"Space Grotesk",sans-serif}h1{font-size:clamp(45px,6vw,78px);line-height:.99;letter-spacing:-3px;margin:18px 0 25px}h1 span{color:var(--accent)}.hero p{max-width:600px;color:var(--muted);font-size:17px;line-height:1.7}.search-box{display:flex;max-width:650px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:7px 8px 7px 17px;box-shadow:var(--shadow);margin-top:30px}.search-box span,.course-search span{font-size:25px;color:var(--muted);align-self:center}.search-box input,.course-search input{flex:1;border:0;outline:0;background:transparent;padding:13px;font-size:15px}.search-box button{border:0;background:var(--ink);color:#fff;border-radius:11px;padding:0 22px;cursor:pointer}.quick{display:flex;gap:8px;margin-top:13px;flex-wrap:wrap}.quick button{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:20px;padding:7px 12px;cursor:pointer}.hero-card{min-height:330px;border-radius:32px;background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:35px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--shadow)}.hero-icon{position:absolute;right:15%;top:20%;font-size:170px;color:#b9e5d8;line-height:1;transform:rotate(-20deg)}.orb{position:absolute;border-radius:50%;filter:blur(2px);opacity:.35}.orb1{width:220px;height:220px;background:#3b9b82;right:-60px;top:-70px}.orb2{width:180px;height:180px;background:#c18b2e;left:-90px;bottom:-90px}.hero-card small{display:block;color:#b8c9c4;margin-top:5px}.section{padding:90px 9vw}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px}.section h2{font-size:38px;margin:9px 0 0;letter-spacing:-1px}.count{color:var(--muted);font-size:13px}.course-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.course-card{text-align:left;border:1px solid var(--line);background:#fff;border-radius:24px;padding:31px;min-height:285px;position:relative;cursor:pointer;transition:.25s;box-shadow:0 8px 25px rgba(20,40,34,.04)}.course-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.course-card.geo{border-top:4px solid var(--accent)}.course-card.water{border-top:4px solid #3a8ea0}.course-icon{font-size:40px;color:var(--accent)}.water .course-icon{color:#3a8ea0}.course-no{position:absolute;right:28px;top:30px;color:#a5b2ae;font-size:12px}.course-card h3{font-size:25px;margin:24px 0 12px}.course-card p{color:var(--muted);line-height:1.65;max-width:500px}.open{display:inline-block;margin-top:15px;font-weight:700;color:var(--accent)}.results{padding-top:40px}.back{border:0;background:transparent;color:var(--muted);cursor:pointer;padding:8px 0}.course-search{display:flex;background:#fff;border:1px solid var(--line);border-radius:14px;padding:5px 15px;max-width:760px;margin:0 0 25px;box-shadow:0 8px 25px rgba(20,40,34,.04)}.experiment-list{display:grid;gap:12px}.experiment-item{background:#fff;border:1px solid var(--line);border-radius:17px;padding:21px 23px;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center}.experiment-item:hover{border-color:#a8cfc3}.experiment-item h3{margin:0 0 6px;font-size:18px}.experiment-item p{margin:0;color:var(--muted);font-size:14px}.arrow{font-size:20px;color:var(--accent)}.notice{background:#eef7f3;border:1px solid #cfe5dc;border-radius:15px;padding:18px;color:#315c50;margin-bottom:20px;line-height:1.6}.detail{padding-top:35px}.detail h2{font-size:42px;max-width:900px;margin:25px 0 14px}.detail h3{margin-top:34px;font-size:21px}.detail p,.detail li{line-height:1.7;color:#4e5e59}.detail .aim{font-size:17px}.badge{display:inline-block;background:var(--accent2);color:#075743;border-radius:20px;padding:5px 10px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-right:7px}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:25px}.info-box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}.info-box h3{margin:0 0 10px}.formula{background:#102a24;color:#d7eee7;padding:20px;border-radius:14px;font-family:monospace;font-size:16px;overflow:auto}.note{background:#eef7f3;border-left:4px solid var(--accent);padding:18px;border-radius:9px}.detail table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);margin-top:15px;font-size:14px}.detail th,.detail td{padding:11px;border:1px solid var(--line);text-align:left}.detail th{background:#edf4f1}.reading-block{margin-top:28px}.reading-title{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.reading-title h4{font:600 18px "Space Grotesk";margin:0}.reading-label{display:inline-block;border-radius:20px;padding:6px 11px;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase}.example-label{background:#f7eddc;color:#815b18}.your-label{background:var(--accent2);color:#075743}.reading-note{color:var(--muted);font-size:13px;margin:7px 0 12px;line-height:1.5}.entry-table td[contenteditable="true"]{background:#fffdf5;min-width:70px;outline:none}.entry-table input.moisture-reading{width:90px;min-width:70px;padding:9px 6px;border:1px solid #d9dfd8;border-radius:7px;background:#fffdf5;outline:none}.entry-table input.moisture-reading:focus{border-color:#3b9b82;box-shadow:0 0 0 2px #d8eee6}.entry-table td{vertical-align:middle}.entry-table td[contenteditable="true"]:focus{box-shadow:inset 0 0 0 2px #a8cfc3}.result-entry{background:#fffdf5;border:1px dashed #b9cfc7;border-radius:12px;padding:14px;min-height:48px;outline:none}.result-entry:focus{box-shadow:inset 0 0 0 2px #a8cfc3}.calc-box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}.calc-box textarea{width:100%;min-height:120px;border:1px solid var(--line);border-radius:10px;padding:12px;resize:vertical;outline:none;font:inherit}.calc-box textarea:focus{border-color:#a8cfc3}.lab-photo{margin:24px 0;padding:18px;background:#fff;border:1px solid var(--line);border-radius:16px}.lab-photo>b{display:block;margin-bottom:12px;font-family:"Space Grotesk",sans-serif}.lab-photo img{display:block;width:100%;max-width:620px;max-height:380px;object-fit:contain;object-position:left center;border-radius:10px;background:#f7f8f6}.lab-photo figcaption{font-size:12px;line-height:1.5;color:var(--muted);margin-top:10px}.lab-photo.image-unavailable{color:var(--muted)}.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;background:#eaf2ef}.about p{color:var(--muted);line-height:1.8;margin:0;font-size:16px}footer{padding:30px 9vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:13px}.hidden{display:none!important}@media(max-width:800px){.topbar{padding:0 5vw}.hero{grid-template-columns:1fr;padding:65px 6vw}.hero-card{min-height:220px}.section{padding:65px 6vw}.course-grid,.info-grid,.about{grid-template-columns:1fr}.section h2{font-size:31px}.detail h2{font-size:31px}.about{gap:25px}footer{padding:25px 6vw;display:block}footer span{display:block;margin-top:7px}.search-box button{padding:0 14px}.topbar nav{gap:15px}}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" onclick="goHome();return false;"><span class="brand-mark">GW</span><span>Geo & Water Lab</span></a>
+  <nav><a href="#courses">Courses</a><a href="#about">About</a></nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <span class="eyebrow">CIVIL ENGINEERING LAB PORTAL</span>
+    <h1>Find your experiment.<br><span>Study it. Perform it.</span></h1>
+    <p>Search an experiment by name, aim or keyword and open its complete laboratory information.</p>
+    <div class="search-box">
+      <span>⌕</span>
+      <input id="globalSearch" type="search" placeholder="Search experiment or aim…" autocomplete="off">
+      <button onclick="searchNow()">Search</button>
+    </div>
+    <div class="quick" id="quickSearch">
+      <button onclick="quick('water content')">Water content</button><button onclick="quick('hardness')">Water hardness</button><button onclick="quick('COD')">COD</button>
+      <button onclick="quick('specific gravity')">Specific gravity</button>
+      <button onclick="quick('sieve analysis')">Sieve analysis</button>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="orb orb1"></div><div class="orb orb2"></div>
+    <div class="hero-icon">⌁</div>
+    <div><b>Laboratory knowledge</b><small>organized in one place</small></div>
+  </div>
+</section>
+
+<section id="courses" class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">SELECT COURSE</span><h2>Choose your laboratory</h2></div>
+    <span class="count">2 courses</span>
+  </div>
+  <div class="course-grid">
+    <button class="course-card geo" onclick="selectCourse('geotech')">
+      <span class="course-icon">◈</span><span class="course-no">01</span>
+      <h3>Geotechnical Engineering</h3>
+      <p>Soil characterization, index properties, grain-size analysis and laboratory testing.</p>
+      <span class="open">Open course →</span>
+    </button>
+    <button class="course-card water" onclick="selectCourse('water')">
+      <span class="course-icon">≈</span><span class="course-no">02</span>
+      <h3>Water Quality Monitoring</h3>
+      <p>Laboratory experiments and observations for water-quality monitoring.</p>
+      <span class="open">Open course →</span>
+    </button>
+  </div>
+</section>
+
+<section id="results" class="section results hidden">
+  <div class="section-head">
+    <div><span class="eyebrow" id="courseLabel">COURSE</span><h2 id="courseTitle">Experiments</h2></div>
+    <button class="back" onclick="goHome()">← All courses</button>
+  </div>
+  <div id="courseNotice" class="notice hidden"></div>
+  <div class="course-search">
+    <span>⌕</span><input id="courseSearch" type="search" placeholder="Search this course by experiment name or aim…">
+  </div>
+  <div id="experimentList" class="experiment-list"></div>
+</section>
+
+<section id="detail" class="section detail hidden">
+  <button class="back" onclick="backToCourse()">← Back to experiments</button>
+  <div id="detailContent"></div>
+</section>
+
+<section id="about" class="section about">
+  <div><span class="eyebrow">ABOUT THE PROJECT</span><h2>One place for practical work.</h2></div>
+  <p>Geo & Water Lab is designed as a mobile-friendly digital laboratory manual. The structure supports aim/name search, complete experiment details, example readings, spaces for your own laboratory readings, calculations, results, precautions and viva preparation.</p>
+</section>
+</main>
+
+<footer><b>Geo & Water Lab</b><span>Built for Civil Engineering laboratory learning.</span></footer>
+<script>
+const GEO = {
+  moisture:{name:"Determination of Water (Moisture) Content of Soil",aim:"To determine the water content of the given soil sample.",keywords:["water content","moisture content","oven drying","oven dry"],apparatus:["Moisture tins/containers","Weighing balance","Oven at about 100–105°C","Desiccator (where available)"],theory:"Water content is the ratio of the mass of water to the mass of dry soil solids, expressed as a percentage.",formula:"Water mass = W2 − W3; Dry soil mass = W3 − W1; w (%) = [(W2 − W3) / (W3 − W1)] × 100; W1 = empty container, W2 = container + wet soil, W3 = container + dry soil",procedure:["Take a clean, dry moisture container and record its mass.","Place the representative wet soil sample in the container and record the mass.","Keep the container with soil in the oven until the soil reaches constant dry mass.","Remove the container, cool it and record the mass of the dry soil with container.","Calculate mass of water and mass of dry soil.","Calculate water content and report the average of the trials."],result:"<div class=\"reading-block\"><div class=\"reading-title\"><span class=\"reading-label example-label\">Example Result</span></div><div class=\"reading-note\">Reference result from the supplied manual: Average water content recorded in the supplied result sheet = <b>29.32%</b>.</div><div class=\"reading-title\" style=\"margin-top:18px\"><span class=\"reading-label your-label\">Your Final Result</span></div><div class=\"result-entry\" contenteditable=\"true\">Enter your final result here…</div></div>",observations:`<div class="reading-block"><div class="reading-title"><h4>Example Reading</h4><span class="reading-label example-label">Example only</span></div><div class="reading-note">W1 = empty container; W2 = container + wet soil; W3 = container + dry soil. Enter only W1, W2 and W3 in Your Reading. The other columns calculate automatically.</div><table><tr><th>Trial</th><th>W1 (g)</th><th>W2 (g)</th><th>W3 (g)</th><th>Water (g)</th><th>Dry soil (g)</th><th>w (%)</th></tr><tr><td>1</td><td>32.7</td><td>59.2</td><td>53.1</td><td>6.1</td><td>20.4</td><td>29.90</td></tr><tr><td>2</td><td>33.0</td><td>62.5</td><td>56.0</td><td>6.5</td><td>23.0</td><td>28.26</td></tr><tr><td>3</td><td>31.8</td><td>56.2</td><td>50.6</td><td>5.6</td><td>18.8</td><td>29.79</td></tr></table><div class="reading-title" style="margin-top:24px"><h4>Your Reading</h4><span class="reading-label your-label">Enter only 3 values per trial</span></div><div class="reading-note">Type your actual readings in the yellow boxes. Water mass, dry soil mass and water content will update automatically.</div><table class="entry-table" id="moistureInputTable"><thead><tr><th>Trial</th><th>W1 (g)</th><th>W2 (g)</th><th>W3 (g)</th><th>Water (g)</th><th>Dry soil (g)</th><th>w (%)</th></tr></thead><tbody><tr><td>1</td><td><input class="moisture-reading" type="number" step="any" data-trial="0" data-kind="w1" aria-label="Trial 1 W1"></td><td><input class="moisture-reading" type="number" step="any" data-trial="0" data-kind="w2" aria-label="Trial 1 W2"></td><td><input class="moisture-reading" type="number" step="any" data-trial="0" data-kind="w3" aria-label="Trial 1 W3"></td><td id="water0">—</td><td id="dry0">—</td><td id="percent0">—</td></tr><tr><td>2</td><td><input class="moisture-reading" type="number" step="any" data-trial="1" data-kind="w1" aria-label="Trial 2 W1"></td><td><input class="moisture-reading" type="number" step="any" data-trial="1" data-kind="w2" aria-label="Trial 2 W2"></td><td><input class="moisture-reading" type="number" step="any" data-trial="1" data-kind="w3" aria-label="Trial 2 W3"></td><td id="water1">—</td><td id="dry1">—</td><td id="percent1">—</td></tr><tr><td>3</td><td><input class="moisture-reading" type="number" step="any" data-trial="2" data-kind="w1" aria-label="Trial 3 W1"></td><td><input class="moisture-reading" type="number" step="any" data-trial="2" data-kind="w2" aria-label="Trial 3 W2"></td><td><input class="moisture-reading" type="number" step="any" data-trial="2" data-kind="w3" aria-label="Trial 3 W3"></td><td id="water2">—</td><td id="dry2">—</td><td id="percent2">—</td></tr></tbody></table><div class="calc-box" style="margin-top:18px"><h4 style="margin:0 0 10px">Your Calculations — automatic</h4><div id="moistureWorking" class="reading-note">Enter W1, W2 and W3 for at least one trial to see the calculation steps.</div><p><b>Average water content:</b> <span id="moistureAverage">—</span></p></div></div>`,precautions:["Use a representative soil sample.","Ensure the sample is dried to constant mass.","Avoid loss of soil during transfer.","Record masses accurately."],viva:["What is water content?","Why is soil oven-dried?","Why is water content expressed as a percentage?","What is the usual oven temperature used for soil moisture determination?"]},
+  pycnometer:{name:"Determination of Specific Gravity of Soil by Pycnometer Method",aim:"To determine the specific gravity of the given soil sample by pycnometer method.",keywords:["specific gravity","pycnometer","soil solids","coarse grained"],apparatus:["Pycnometer","Balance","Oven","Glass rod","Distilled/de-aired water","Air-removal arrangement","Thermometer"],theory:"Specific gravity of soil solids is the ratio of the mass of a given volume of dry soil solids to the mass of an equal volume of water at the specified temperature.",formula:"G = (M2 − M1) / [(M4 − M1) − (M3 − M2)]",procedure:["Clean and dry the pycnometer and record M1.","Place oven-dried soil in the pycnometer and record M2.","Add distilled/de-aired water and remove entrapped air.","Fill to the required level, dry the outside and record M3.","Fill the clean pycnometer with water only to the same level and record M4.","Repeat for the required trials and calculate G.","Take the average specific gravity."],result:"<div class=\"reading-block\"><div class=\"reading-title\"><span class=\"reading-label example-label\">Example Result</span></div><div class=\"reading-note\">Reference result from the supplied manual: The supplied result sheet records an average specific gravity of <b>2.58</b>.</div><div class=\"reading-title\" style=\"margin-top:18px\"><span class=\"reading-label your-label\">Your Final Result</span></div><div class=\"result-entry\" contenteditable=\"true\">Enter your final result here…</div></div>",observations:`<div class="reading-block"><div class="reading-title"><h4>Example Reading</h4><span class="reading-label example-label">Example only</span></div><div class="reading-note">These values are from the supplied manual and are for reference only.</div><table><tr><th>Quantity</th><th>Sample 1</th><th>Sample 2</th><th>Sample 3</th></tr><tr><td>M1 (g)</td><td>643.5</td><td>643.5</td><td>643.5</td></tr><tr><td>M2 (g)</td><td>779.1</td><td>795.0</td><td>769.0</td></tr><tr><td>M3 (g)</td><td>1761.1</td><td>1747.5</td><td>1755.6</td></tr><tr><td>M4 (g)</td><td>1679.5</td><td>1679.8</td><td>1678.9</td></tr><tr><td>Recorded G</td><td>2.511</td><td>2.681</td><td>2.570</td></tr></table><div class="reading-title" style="margin-top:24px"><h4>Your Reading</h4><span class="reading-label your-label">Enter your values</span></div><div class="reading-note">Tap/click the empty cells and enter your actual laboratory readings.</div><table class="entry-table"><tr><th>Quantity</th><th>Sample 1</th><th>Sample 2</th><th>Sample 3</th></tr><tr><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td></tr><tr><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td></tr><tr><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td></tr></table></div>`,precautions:["Dry the soil properly.","Remove entrapped air completely.","Keep the outside dry before weighing.","Maintain the same filling condition for M3 and M4.","Temperature correction may be applied for higher accuracy."],viva:["What is specific gravity?","Why is entrapped air removed?","Why is distilled water used?","What is the significance of specific gravity in soil mechanics?"]},
+  density:{name:"Determination of Specific Gravity of Soil by Density Bottle Method",aim:"To determine the specific gravity of fine-grained soil using a 50 ml density bottle.",keywords:["density bottle","50 ml","fine grained","specific gravity"],apparatus:["50 ml density bottle","Accurate weighing balance","Oven","Distilled/de-aired water","Air-removal arrangement","Thermometer"],theory:"For fine-grained soil passing the 2 mm IS sieve, a density bottle can be used to determine specific gravity from four measured masses.",formula:"G = (M2 − M1) / [(M4 − M1) − (M3 − M2)]",procedure:["Clean, dry and weigh the density bottle as M1.","Take oven-dried soil passing the 2 mm sieve and record M2.","Add water and remove entrapped air.","Fill to the calibration mark, clean the outside and record M3.","Fill the bottle with distilled water only to the same mark and record M4.","Calculate G for each trial and the average."],result:"<div class=\"reading-block\"><div class=\"reading-title\"><span class=\"reading-label example-label\">Example Result</span></div><div class=\"reading-note\">Reference result from the supplied manual: The supplied result sheet records an average specific gravity of <b>2.594</b>.</div><div class=\"reading-title\" style=\"margin-top:18px\"><span class=\"reading-label your-label\">Your Final Result</span></div><div class=\"result-entry\" contenteditable=\"true\">Enter your final result here…</div></div>",observations:`<div class="reading-block"><div class="reading-title"><h4>Example Reading</h4><span class="reading-label example-label">Example only</span></div><div class="reading-note">These values are from the supplied manual and are for reference only.</div><table><tr><th>Quantity</th><th>Sample 1</th><th>Sample 2</th><th>Sample 3</th></tr><tr><td>M1 (g)</td><td>23.9</td><td>23.9</td><td>23.9</td></tr><tr><td>M2 (g)</td><td>34.2</td><td>35.0</td><td>34.84</td></tr><tr><td>M3 (g)</td><td>86.8</td><td>88.0</td><td>86.8</td></tr><tr><td>M4 (g)</td><td>80.5</td><td>81.0</td><td>80.5</td></tr><tr><td>Recorded G</td><td>2.575</td><td>2.707</td><td>2.500</td></tr></table><div class="reading-title" style="margin-top:24px"><h4>Your Reading</h4><span class="reading-label your-label">Enter your values</span></div><div class="reading-note">Tap/click the empty cells and enter your actual laboratory readings.</div><table class="entry-table"><tr><th>Quantity</th><th>Sample 1</th><th>Sample 2</th><th>Sample 3</th></tr><tr><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td></tr><tr><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td></tr><tr><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td></tr></table></div>`,precautions:["Use oven-dried soil.","Remove air bubbles.","Do not lose soil during transfer.","Clean and dry the outside before weighing.","Repeat the test when the results do not meet the laboratory consistency requirement."],viva:["Why is a density bottle used for fine soil?","What is its capacity in this experiment?","Why must air bubbles be removed?","What is the formula for specific gravity?"]},
+  sieve:{name:"Grain Size Analysis by Mechanical Sieve Analysis",aim:"To determine the particle-size distribution of the given soil sample by sieve analysis.",keywords:["sieve analysis","grain size","particle size distribution","sieve"],apparatus:["Set of IS sieves","Pan and lid","Weighing balance","Mechanical/manual sieve shaker","Oven"],theory:"Sieve analysis separates soil particles according to size. Percentage retained, cumulative percentage retained and percentage finer are calculated from the masses retained.",formula:"% retained = (mass retained / total sample mass) × 100; cumulative % retained = running total; % finer = 100 − cumulative % retained",procedure:["Take a representative oven-dried soil sample. The supplied sheet records an initial mass of 1000 g.","Arrange sieves from largest opening to smallest, followed by the pan.","Place the soil on the top sieve and close the lid.","Shake the complete sieve set for the specified time.","Measure the mass retained on each sieve and the pan.","Calculate percentage retained, cumulative percentage retained and percentage finer.","Prepare the particle-size distribution curve if required."],result:"<div class=\"reading-block\"><div class=\"reading-title\"><span class=\"reading-label example-label\">Example Result</span></div><div class=\"reading-note\">Reference result from the supplied manual: The supplied sheet records an initial sample mass of <b>1000 g</b> and the listed retained masses/percentages.</div><div class=\"reading-title\" style=\"margin-top:18px\"><span class=\"reading-label your-label\">Your Final Result</span></div><div class=\"result-entry\" contenteditable=\"true\">Enter your final result here…</div></div>",observations:`<div class="reading-block"><div class="reading-title"><h4>Example Reading</h4><span class="reading-label example-label">Example only</span></div><div class="reading-note">These values are from the supplied manual and are for reference only.</div><table><tr><th>Sieve (mm)</th><th>Mass retained (g)</th><th>% retained</th><th>Cumulative (%)</th><th>% finer</th></tr><tr><td>4.75</td><td>—</td><td>—</td><td>0.00</td><td>100.00</td></tr><tr><td>2.00</td><td>0.9</td><td>0.09</td><td>0.09</td><td>99.91</td></tr><tr><td>1.00</td><td>4.4</td><td>0.44</td><td>0.53</td><td>99.47</td></tr><tr><td>0.600</td><td>5.0</td><td>0.50</td><td>1.03</td><td>98.97</td></tr><tr><td>0.425</td><td>13.5</td><td>1.35</td><td>2.38</td><td>97.62</td></tr><tr><td>0.300</td><td>2.6</td><td>0.26</td><td>2.64</td><td>97.36</td></tr><tr><td>0.150</td><td>36.8</td><td>3.68</td><td>6.32</td><td>93.68</td></tr><tr><td>0.075</td><td>25.9</td><td>2.59</td><td>8.91</td><td>91.09</td></tr><tr><td>Pan</td><td>0.7</td><td>0.07</td><td>8.98</td><td>91.02</td></tr></table><div class="reading-title" style="margin-top:24px"><h4>Your Reading</h4><span class="reading-label your-label">Enter your values</span></div><div class="reading-note">Tap/click the empty cells and enter your actual laboratory readings.</div><table class="entry-table"><tr><th>Sieve (mm)</th><th>Mass retained (g)</th><th>% retained</th><th>Cumulative (%)</th><th>% finer</th></tr><tr><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td></tr><tr><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td></tr><tr><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td><td contenteditable="true">&nbsp;</td></tr></table></div>`,precautions:["Sieves should be clean and dry.","Do not overload sieves.","Ensure adequate shaking.","Do not force particles through sieve openings.","Recovered mass should be checked against initial mass."],viva:["What is sieve analysis?","What is the purpose of a particle-size distribution curve?","Why is 0.075 mm important?","What is cumulative percentage retained?","Why should soil be oven dried before sieve analysis?"]}
+};
+
+const WATER = {
+ ph:{name:"Determination of pH of Water",aim:"To determine the pH of the given water sample using a calibrated pH meter.",keywords:["pH","acidity","alkalinity","pH meter","water sample"],apparatus:["pH meter with electrode","Buffer solutions (pH 4, 7 and/or 9.2)","Beakers","Wash bottle with distilled water","Tissue paper"],theory:"pH indicates the acidic or alkaline nature of water and is defined as the negative logarithm of hydrogen-ion activity. A pH of 7 is neutral at about 25°C; values below 7 are acidic and values above 7 are alkaline. pH affects treatment processes, corrosion, disinfection and aquatic life.",formula:"pH = −log₁₀[H⁺] (the pH meter displays the measured value directly; no titration calculation is normally required).",procedure:["Switch on the pH meter and allow it to stabilize.","Calibrate the meter with suitable standard buffer solutions following the instrument instructions.","Rinse the electrode with distilled water and gently blot it dry.","Immerse the electrode in the well-mixed water sample without touching the beaker bottom.","Wait for the reading to stabilize and record pH and temperature.","Rinse the electrode after measurement and store it as recommended by the manufacturer."],observations:`<div class="reading-block"><div class="reading-title"><h4>Example Reading</h4><span class="reading-label example-label">Example only</span></div><table><tr><th>Sample</th><th>Temperature (°C)</th><th>pH</th></tr><tr><td>Example water</td><td>25</td><td>7.20</td></tr></table><div class="reading-title" style="margin-top:24px"><h4>Your Reading</h4><span class="reading-label your-label">Enter your value</span></div><p class="reading-note">Enter the stable pH-meter reading. The final result updates automatically.</p><label>Measured pH <input id="wph" type="number" min="0" max="14" step="any" placeholder="e.g. 7.2"></label><label style="margin-left:12px">Temperature (°C) <input id="wphTemp" type="number" step="any" placeholder="e.g. 25"></label><div class="calc-box" style="margin-top:14px"><b>Calculated result:</b> <span id="wphResult">Enter a pH reading.</span></div></div>`,formulaCalc:"pH",result:"Record the measured pH of the sample and state whether it is acidic, neutral or alkaline.",precautions:["Calibrate before use.","Do not wipe or rub the glass bulb; blot gently.","Keep the electrode hydrated as instructed.","Record temperature and avoid contaminating buffer solutions."],viva:["What does pH indicate?","What is neutral pH at about 25°C?","Why is pH meter calibration required?","How does pH affect water treatment?"]},
+ alkalinity:{name:"Determination of Alkalinity of Water",aim:"To determine total alkalinity of a water sample by acid titration using the appropriate indicator or pH endpoints.",keywords:["alkalinity","phenolphthalein","methyl orange","acid titration","carbonate bicarbonate"],apparatus:["Burette and stand","Pipette","Conical flask","Standard acid (normality known)","Phenolphthalein and methyl-orange/mixed indicator or pH meter"],theory:"Alkalinity is the capacity of water to neutralize acid. It is commonly due to hydroxide, carbonate and bicarbonate ions. It is reported as mg/L as CaCO₃. The titration volume and acid normality are used to calculate alkalinity.",formula:"Total alkalinity (mg/L as CaCO₃) = (A × N × 50,000) / V; A = acid volume used to the total-alkalinity endpoint (mL), N = acid normality, V = sample volume (mL).",procedure:["Measure a known volume of well-mixed sample into a conical flask.","Add the indicator specified by the laboratory method.","Titrate with standardized acid to the required endpoint; for total alkalinity, use the endpoint specified in your manual (commonly about pH 4.5).","Record the acid volume used and repeat if required.","Enter sample volume, acid normality and titre volume in the calculator.","Report total alkalinity as mg/L CaCO₃. If phenolphthalein alkalinity is also required, perform and record that endpoint separately."],observations:`<div class="reading-block"><div class="reading-title"><h4>Example Reading</h4><span class="reading-label example-label">Example only</span></div><table><tr><th>Sample volume</th><th>Acid normality</th><th>Acid titre</th><th>Total alkalinity</th></tr><tr><td>100 mL</td><td>0.02 N</td><td>12.0 mL</td><td>120 mg/L as CaCO₃</td></tr></table><div class="reading-title" style="margin-top:24px"><h4>Your Reading</h4><span class="reading-label your-label">Enter required values</span></div><div class="reading-note">Enter the values from your own titration.</div><label>Sample volume V (mL) <input id="alkV" type="number" min="0" step="any" placeholder="e.g. 100"></label> <label>Acid normality N <input id="alkN" type="number" min="0" step="any" placeholder="e.g. 0.02"></label> <label>Acid titre A (mL) <input id="alkA" type="number" min="0" step="any" placeholder="e.g. 12"></label><div class="calc-box" style="margin-top:14px"><b>Calculated total alkalinity:</b> <span id="alkResult">Enter all three values.</span><p id="alkWork" class="reading-note"></p></div></div>`,formulaCalc:"alkalinity",result:"Report total alkalinity in mg/L as CaCO₃. Use the endpoint and acid strength specified in the laboratory manual.",precautions:["Use standardized acid and clean glassware.","Observe the specified endpoint carefully.","Do not use an assumed normality; enter the actual standardized value.","Perform a blank or replicate if required by the laboratory procedure."],viva:["What is alkalinity?","Which ions contribute to alkalinity?","Why is alkalinity expressed as CaCO₃?","What is the usual total-alkalinity endpoint?"]},
+ hardness:{name:"Determination of Total Hardness of Water by EDTA Method",aim:"To determine total hardness of the given water sample by complexometric titration with EDTA.",keywords:["hardness","EDTA","total hardness","calcium magnesium","EBT"],apparatus:["Burette and stand","Pipette","Conical flask","Standard EDTA solution","Ammonia buffer (pH about 10)","Eriochrome Black T indicator"],theory:"Hardness is mainly caused by dissolved calcium and magnesium salts. At pH about 10, EDTA complexes these ions. Eriochrome Black T changes from wine-red to blue at the endpoint. Total hardness is reported as mg/L as CaCO₃.",formula:"Total hardness (mg/L as CaCO₃) = (A × B × 1000) / V; A = EDTA used (mL), B = CaCO₃ equivalent of 1 mL EDTA (mg/mL, from standardization), V = sample volume (mL).",procedure:["Pipette a known volume of sample into a conical flask.","Add the buffer solution to maintain pH about 10.","Add a few drops of Eriochrome Black T indicator; the sample becomes wine-red if hardness is present.","Titrate with standardized EDTA until the colour changes to clear blue.","Record EDTA volume and enter the sample volume and standardized EDTA factor.","Calculate total hardness as mg/L CaCO₃."],observations:`<div class="reading-block"><div class="reading-title"><h4>Example Reading</h4><span class="reading-label example-label">Example only</span></div><table><tr><th>Sample volume</th><th>EDTA used</th><th>EDTA factor</th><th>Total hardness</th></tr><tr><td>50 mL</td><td>10 mL</td><td>1 mg CaCO₃/mL EDTA</td><td>200 mg/L as CaCO₃</td></tr></table><div class="reading-title" style="margin-top:24px"><h4>Your Reading</h4><span class="reading-label your-label">Enter required values</span></div><div class="reading-note">Use the EDTA factor obtained from your own standardization; do not assume it is 1 unless your lab method confirms it.</div><label>Sample volume V (mL) <input id="hardV" type="number" min="0" step="any" placeholder="e.g. 50"></label> <label>EDTA titre A (mL) <input id="hardA" type="number" min="0" step="any" placeholder="e.g. 10"></label> <label>EDTA factor B (mg CaCO₃/mL) <input id="hardB" type="number" min="0" step="any" placeholder="from standardization"></label><div class="calc-box" style="margin-top:14px"><b>Calculated total hardness:</b> <span id="hardResult">Enter all three values.</span><p id="hardWork" class="reading-note"></p></div></div>`,formulaCalc:"hardness",result:"Report total hardness in mg/L as CaCO₃, using the standardized EDTA factor.",precautions:["Maintain pH close to 10.","Use freshly prepared/valid indicator as instructed.","Observe the wine-red to blue endpoint carefully.","Use the factor from the actual EDTA standardization."],viva:["What causes hardness in water?","Why is EDTA used?","Why is buffer added?","What is the endpoint colour change?"]},
+ chloride:{name:"Determination of Chloride in Water by Argentometric Method",aim:"To determine chloride concentration in a water sample by titration with standard silver nitrate using potassium chromate indicator.",keywords:["chloride","silver nitrate","argentometric","mohr method","potassium chromate"],apparatus:["Burette and stand","Pipette","Conical flask","Standard AgNO₃ solution","Potassium chromate indicator"],theory:"In the Mohr method, chloride ions react with silver ions to form a white precipitate of silver chloride. Once chloride is consumed, excess silver ions react with chromate indicator to form a persistent brick-red endpoint. Results are reported as mg/L chloride.",formula:"Chloride (mg/L) = [(A − B) × N × 35,450] / V; A = sample titre (mL), B = blank titre (mL), N = AgNO₃ normality, V = sample volume (mL).",procedure:["Measure a known sample volume into a conical flask.","Adjust the sample pH to the range specified by your laboratory method.","Add potassium chromate indicator.","Titrate with standardized silver nitrate until a persistent faint brick-red colour appears.","Run a blank if required and record both sample and blank titres.","Enter titres, AgNO₃ normality and sample volume to calculate chloride concentration."],observations:`<div class="reading-block"><div class="reading-title"><h4>Example Reading</h4><span class="reading-label example-label">Example only</span></div><table><tr><th>Sample volume</th><th>Sample titre</th><th>Blank</th><th>AgNO₃ normality</th><th>Chloride</th></tr><tr><td>100 mL</td><td>5.0 mL</td><td>0.0 mL</td><td>0.0141 N</td><td>25.0 mg/L</td></tr></table><div class="reading-title" style="margin-top:24px"><h4>Your Reading</h4><span class="reading-label your-label">Enter required values</span></div><label>Sample volume V (mL) <input id="clV" type="number" min="0" step="any" placeholder="e.g. 100"></label> <label>Sample titre A (mL) <input id="clA" type="number" min="0" step="any" placeholder="e.g. 5"></label> <label>Blank titre B (mL) <input id="clBlank" type="number" min="0" step="any" value="0"></label> <label>AgNO₃ normality N <input id="clN" type="number" min="0" step="any" placeholder="e.g. 0.0141"></label><div class="calc-box" style="margin-top:14px"><b>Calculated chloride:</b> <span id="clResult">Enter the required values.</span><p id="clWork" class="reading-note"></p></div></div>`,formulaCalc:"chloride",result:"Report chloride concentration in mg/L. Apply the blank correction when a blank titration is required.",precautions:["Use standardized silver nitrate.","Follow the method's pH range.","Use a blank where specified.","The endpoint should be a persistent faint brick-red colour."],viva:["What is the principle of the Mohr method?","Why is potassium chromate used?","What is the endpoint colour?","Why may a blank correction be needed?"]},
+ bod:{name:"Determination of Biochemical Oxygen Demand (BOD₅)",aim:"To determine five-day biochemical oxygen demand of wastewater by measuring dissolved oxygen before and after incubation.",keywords:["BOD","BOD5","biochemical oxygen demand","dissolved oxygen","incubation"],apparatus:["BOD bottles","DO meter or Winkler titration apparatus","Incubator maintained at 20°C","Dilution water and required nutrients/seed when applicable"],theory:"BOD₅ estimates the oxygen consumed by microorganisms while biologically degrading biodegradable organic matter during five days at 20°C in the dark. Dilution and seed corrections may be necessary for wastewater samples.",formula:"BOD₅ (mg/L) = (D₁ − D₂) / P for an unseeded diluted sample; D₁ = initial DO (mg/L), D₂ = DO after 5 days (mg/L), P = decimal fraction of sample in the bottle. Use the seed-corrected method when seed is added.",procedure:["Prepare an appropriate dilution using the laboratory's method; add seed and nutrients if required.","Fill BOD bottles without trapping air bubbles.","Measure initial dissolved oxygen D₁ in the initial bottle.","Incubate the remaining bottle for five days at 20°C in the dark.","Measure final dissolved oxygen D₂.","Enter D₁, D₂ and sample fraction P to calculate BOD₅. Apply seed correction where required by your manual."],observations:`<div class="reading-block"><div class="reading-title"><h4>Example Reading</h4><span class="reading-label example-label">Example only</span></div><table><tr><th>Initial DO</th><th>Final DO</th><th>Sample fraction</th><th>BOD₅</th></tr><tr><td>8.2 mg/L</td><td>3.2 mg/L</td><td>0.10</td><td>50 mg/L</td></tr></table><div class="reading-title" style="margin-top:24px"><h4>Your Reading</h4><span class="reading-label your-label">Enter required values</span></div><label>Initial DO D₁ (mg/L) <input id="bodD1" type="number" min="0" step="any" placeholder="e.g. 8.2"></label> <label>Final DO D₂ (mg/L) <input id="bodD2" type="number" min="0" step="any" placeholder="e.g. 3.2"></label> <label>Sample fraction P (decimal) <input id="bodP" type="number" min="0" max="1" step="any" placeholder="e.g. 0.10"></label><div class="calc-box" style="margin-top:14px"><b>Calculated BOD₅:</b> <span id="bodResult">Enter all three values.</span><p id="bodWork" class="reading-note"></p></div><p class="reading-note">If seeded dilution water was used, use the seed-corrected equation given in your lab manual; this simple calculator does not apply a seed correction.</p></div>`,formulaCalc:"bod",result:"Report BOD₅ in mg/L and state the dilution fraction used. Ensure the bottle meets the method's DO depletion and residual DO validity requirements.",precautions:["Incubate at 20°C for five days in the dark.","Avoid air bubbles in BOD bottles.","Choose a suitable dilution and record it correctly.","Apply seed correction where applicable; follow your laboratory standard method."],viva:["What does BOD indicate?","Why is incubation done in the dark?","Why is 20°C used?","Why is dilution needed for strong wastewater?"]},
+ cod:{name:"Determination of Chemical Oxygen Demand (COD)",aim:"To estimate the chemical oxygen demand of a water or wastewater sample by the approved dichromate method.",keywords:["COD","chemical oxygen demand","dichromate","ferrous ammonium sulfate","FAS"],apparatus:["COD digestion vials or reflux apparatus","Heating block/reflux unit","Burette if titrimetric method is used","Standard dichromate reagent and FAS titrant according to approved method"],theory:"COD measures the oxygen equivalent of substances in water that can be chemically oxidized under the test conditions. In the dichromate method, the oxidant consumed by the sample is determined, often by titration of the remaining dichromate. Reagents are hazardous and the approved laboratory method must be followed.",formula:"For the common reflux titration method: COD (mg/L) = [(A − B) × N × 8000] / V; A = FAS volume for blank (mL), B = FAS volume for sample (mL), N = FAS normality, V = sample volume (mL). Use the exact equation specified by your kit/method.",procedure:["Follow the approved lab method and required safety precautions for the COD digestion reagents.","Prepare the reagent blank and sample digestion as specified by the method.","Digest for the specified time and temperature using the prescribed apparatus.","Cool the digested samples as directed.","For the titrimetric method, titrate the blank and sample with standardized FAS and record both volumes.","Enter blank titre, sample titre, FAS normality and original sample volume to calculate COD."],observations:`<div class="reading-block"><div class="reading-title"><h4>Example Reading</h4><span class="reading-label example-label">Example only</span></div><table><tr><th>Blank titre A</th><th>Sample titre B</th><th>FAS normality</th><th>Sample volume</th><th>COD</th></tr><tr><td>10.0 mL</td><td>6.0 mL</td><td>0.1 N</td><td>20 mL</td><td>1600 mg/L</td></tr></table><div class="reading-title" style="margin-top:24px"><h4>Your Reading</h4><span class="reading-label your-label">Enter required values</span></div><label>Blank FAS titre A (mL) <input id="codA" type="number" min="0" step="any" placeholder="e.g. 10"></label> <label>Sample FAS titre B (mL) <input id="codB" type="number" min="0" step="any" placeholder="e.g. 6"></label> <label>FAS normality N <input id="codN" type="number" min="0" step="any" placeholder="e.g. 0.1"></label> <label>Sample volume V (mL) <input id="codV" type="number" min="0" step="any" placeholder="e.g. 20"></label><div class="calc-box" style="margin-top:14px"><b>Calculated COD:</b> <span id="codResult">Enter the required values.</span><p id="codWork" class="reading-note"></p></div><p class="reading-note">COD digestion reagents can be corrosive/toxic. Perform this test only in a supervised laboratory using the prescribed PPE and method.</p></div>`,formulaCalc:"cod",result:"Report COD in mg/L and identify the test method used. Confirm factors and sample-volume corrections against the laboratory manual.",precautions:["Wear prescribed PPE and work under laboratory supervision.","Use the method-specific digestion conditions.","Run a reagent blank.","Do not dispose of digestion chemicals down the drain; follow hazardous-waste procedures."],viva:["What does COD measure?","How does COD differ from BOD?","Why is a reagent blank used?","Why must digestion conditions be controlled?"]}
+};
+
+const COURSES = {
+ geotech:{label:"GEOTECHNICAL ENGINEERING",title:"Geotechnical Experiments",items:Object.values(GEO)},
+ water:{label:"WATER QUALITY MONITORING",title:"Water Quality Experiments",items:Object.values(WATER)}
+};
+let currentCourse="geotech";
+
+function selectCourse(id){
+ currentCourse=id;
+ document.querySelector("#courses").classList.add("hidden");
+ document.querySelector("#results").classList.remove("hidden");
+ document.querySelector("#detail").classList.add("hidden");
+ const c=COURSES[id];
+ document.querySelector("#courseLabel").textContent=c.label;
+ document.querySelector("#courseTitle").textContent=c.title;
+ const notice=document.querySelector("#courseNotice");
+ notice.classList.add("hidden");
+ renderList(c.items);
+ document.querySelector("#results").scrollIntoView({behavior:"smooth"});
+}
+
+function renderList(items,query=""){
+ const q=query.toLowerCase().trim();
+ const filtered=items.filter(e=>(e.name+" "+e.aim+" "+e.keywords.join(" ")).toLowerCase().includes(q));
+ const el=document.querySelector("#experimentList");
+ el.innerHTML=filtered.length ? filtered.map((e,i)=>`<button class="experiment-item" onclick="openExperiment(${items.indexOf(e)})"><div><h3>${e.name}</h3><p>${e.aim}</p></div><span class="arrow">→</span></button>`).join("") : `<div class="notice">No matching experiment found. Try another experiment name or aim.</div>`;
+}
+
+document.querySelector("#courseSearch").addEventListener("input",e=>renderList(COURSES[currentCourse].items,e.target.value));
+
+
+function experimentPhoto(e){
+ const n=e.name.toLowerCase();
+ let title="Laboratory apparatus", src="", source="";
+ if(n.includes("moisture content")||n.includes("water (moisture)")){
+  title="Soil moisture content test apparatus";
+  src="https://image.slidesharecdn.com/geotechlab-200304044351/75/Geo-tech-lab-2-2048.jpg";
+  source="Geotechnical laboratory moisture-content apparatus";
+ }
+ else if(n.includes("pycnometer")){
+  title="Specific gravity test using a pycnometer";
+  src="https://upload.wikimedia.org/wikipedia/commons/8/84/PycnometerTest.jpg";
+  source="Wikimedia Commons — PycnometerTest.jpg";
+ }
+ else if(n.includes("density bottle")){
+  title="Specific gravity test using a density bottle";
+  src="https://img.youtube.com/vi/lMF53-EwXtY/hqdefault.jpg";
+  source="Specific gravity of soil by density bottle — experiment reference";
+ }
+ else if(n.includes("sieve")){
+  title="Sieve analysis apparatus";
+  src="https://commons.wikimedia.org/wiki/Special:FilePath/Sieve_Analysis.jpg";
+  source="Wikimedia Commons — Sieve Analysis photograph";
+ }
+ else if(n.includes("ph")){
+  title="pH meter measuring a water sample";
+  src="https://upload.wikimedia.org/wikipedia/commons/8/86/PH_meter_in_a_glass_of_slightly_alkaline_water.jpg";
+  source="Wikimedia Commons — pH meter in water";
+ }
+ else if(n.includes("alkalinity")){
+  title="Alkalinity titration of a water sample";
+  src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/DSCN0097--Joseph_D_Ayotte.JPG";
+  source="U.S. Geological Survey — alkalinity titration (public domain)";
+ }
+ else if(n.includes("hardness")){
+  title="Water hardness by EDTA titration";
+  src="https://1.bp.blogspot.com/-pbjAkJRYUyc/U3T4cOIgfjI/AAAAAAAAADM/RPLuC_rfPnk/s1600/hng.jpg";
+  source="EDTA complexometric titration reference";
+ }
+ else if(n.includes("chloride")){
+  title="Water chloride analysis apparatus";
+  src="https://vlab.amrita.edu/index.php/mec/eng/images/userfiles/1/quiz/2.jpg?brch=193&cnt=2&sim=1548&sub=2";
+  source="Amrita Virtual Lab — water analysis apparatus reference";
+ }
+ else if(n.includes("bod")){
+  title="BOD test incubator";
+  src="https://commons.wikimedia.org/wiki/Special:FilePath/BOD%20Incubator.jpg";
+  source="Wikimedia Commons — BOD incubator";
+ }
+ else if(n.includes("cod")){
+  title="Chemical oxygen demand (COD) digestion reactor";
+  src="https://gomagcdn.ro/domains2/hannainst.ro/files/product/original/reactor-pentru-ape-uzate-cod-metoda-rapida-la-170-c-si-3-puncte-de-temperatura-personalizabile-305569.jpg";
+  source="COD digestion reactor apparatus reference";
+ }
+ if(!src) return "";
+ return `<figure class="lab-photo"><b>${title}</b><img src="${src}" alt="${title}" loading="lazy" onerror="if(this.alt==='Sieve analysis apparatus'&&!this.dataset.fallbackTried){this.dataset.fallbackTried='1';this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Vibrating_sieve.jpg';return;}this.parentElement.classList.add('image-unavailable');this.style.display='none';this.nextElementSibling.textContent='This reference image could not load. Check your internet connection.'"><figcaption>${source}. Reference photo; internet connection required.</figcaption></figure>`;
+}
+
+function openExperiment(index){
+ const e=COURSES[currentCourse].items[index];
+ if(!e)return;
+ document.querySelector("#results").classList.add("hidden");
+ document.querySelector("#detail").classList.remove("hidden");
+ document.querySelector("#detailContent").innerHTML=`
+   <span class="eyebrow">${COURSES[currentCourse].label}</span>
+   <h2>${e.name}</h2>
+   <p class="aim"><span class="badge">Aim</span>${e.aim}</p>
+   <div class="info-grid"><div class="info-box"><h3>Apparatus</h3><ul>${e.apparatus.map(x=>`<li>${x}</li>`).join("")}</ul></div><div class="info-box"><h3>Theory</h3><p>${e.theory}</p></div></div>
+   <h3>Procedure</h3><ol>${e.procedure.map(x=>`<li>${x}</li>`).join("")}</ol>${experimentPhoto(e)}
+   <h3>Formula</h3><div class="formula">${e.formula}</div>
+   <h3>Observations</h3>${e.observations}
+   <h3>Calculation</h3>${e.formulaCalc ? `<p class="reading-note">Enter the readings in the yellow input boxes above. The calculated value and working update automatically.</p>` : ""}
+   <h3>Result</h3><div class="note">${e.result} <div class="reading-title" style="margin-top:14px"><span class="reading-label your-label">Your Final Result</span></div><div class="result-entry" contenteditable="true">Enter your final result here…</div></div>
+   <h3>Precautions</h3><ul>${e.precautions.map(x=>`<li>${x}</li>`).join("")}</ul>
+   <h3>Viva Questions</h3><ul>${e.viva.map(x=>`<li>${x}</li>`).join("")}</ul>`;
+ if(e===GEO.moisture){ setupMoistureCalculator(); }
+ if(e.formulaCalc){ setupWaterCalculator(e.formulaCalc); }
+ document.querySelector("#detail").scrollIntoView({behavior:"smooth"});
+}
+
+function setupMoistureCalculator(){
+ const inputs=[...document.querySelectorAll(".moisture-reading")];
+ if(!inputs.length)return;
+ function update(){
+  const values=[0,1,2].map(i=>{
+   const get=k=>{const el=document.querySelector(`.moisture-reading[data-trial="${i}"][data-kind="${k}"]`);return el&&el.value.trim()!==""?Number(el.value):null};
+   const w1=get("w1"),w2=get("w2"),w3=get("w3");
+   if(w1===null||w2===null||w3===null)return {ready:false};
+   const water=w2-w3, dry=w3-w1;
+   if(water<0||dry<=0||w3<=w1||w2<=w3)return {ready:true,valid:false};
+   return {ready:true,valid:true,water,dry,percent:water/dry*100,w1,w2,w3};
+  });
+  values.forEach((v,i)=>{
+   document.getElementById("water"+i).textContent=v.ready&&v.valid?v.water.toFixed(3):"—";
+   document.getElementById("dry"+i).textContent=v.ready&&v.valid?v.dry.toFixed(3):"—";
+   document.getElementById("percent"+i).textContent=v.ready&&v.valid?v.percent.toFixed(2)+"%":(v.ready?"Check values":"—");
+  });
+  const good=values.filter(v=>v.ready&&v.valid);
+  const avg=good.length?good.reduce((sum,v)=>sum+v.percent,0)/good.length:null;
+  document.getElementById("moistureAverage").textContent=avg===null?"—":avg.toFixed(2)+"%";
+  const steps=good.map((v,i)=>`Trial ${values.indexOf(v)+1}: Water = W2 − W3 = ${v.w2} − ${v.w3} = ${v.water.toFixed(3)} g; dry soil = W3 − W1 = ${v.w3} − ${v.w1} = ${v.dry.toFixed(3)} g; water content = (${v.water.toFixed(3)} / ${v.dry.toFixed(3)}) × 100 = ${v.percent.toFixed(2)}%.`);
+  const invalid=values.some(v=>v.ready&&!v.valid);
+  document.getElementById("moistureWorking").textContent=steps.length?steps.join(" ")+(invalid?" Check any trial where W1 is less than W2 or W2 is not greater than W3.":""):"Enter W1, W2 and W3 for at least one trial. Use W1 = empty container, W2 = container + wet soil, and W3 = container + dry soil.";
+ }
+ inputs.forEach(el=>el.addEventListener("input",update));
+ update();
+}
+
+
+function setupWaterCalculator(type){
+ const num=id=>{const el=document.getElementById(id);return el&&el.value.trim()!==""?Number(el.value):null};
+ const put=(id,text)=>{const el=document.getElementById(id);if(el)el.textContent=text;};
+ const fmt=(n,d=2)=>Number.isFinite(n)?n.toFixed(d):"—";
+ const update=()=>{
+  if(type==="pH"){
+   const p=num("wph"),t=num("wphTemp");
+   put("wphResult",p===null?"Enter a pH reading.":(p<0||p>14?"Check pH; usual meter scale is 0–14.":`pH ${fmt(p,2)} — ${p<7?"acidic":p>7?"alkaline":"neutral"}${t===null?"":` at ${fmt(t,1)} °C`}.`));
+  }else if(type==="alkalinity"){
+   const v=num("alkV"),n=num("alkN"),a=num("alkA");
+   if(v>0&&n>0&&a!==null&&a>=0){const r=a*n*50000/v;put("alkResult",`${fmt(r)} mg/L as CaCO₃`);put("alkWork",`(${a} × ${n} × 50,000) / ${v} = ${fmt(r)} mg/L as CaCO₃`)}else{put("alkResult","Enter valid positive sample volume and acid normality, plus titre volume.");put("alkWork","")}
+  }else if(type==="hardness"){
+   const v=num("hardV"),a=num("hardA"),b=num("hardB");
+   if(v>0&&a!==null&&a>=0&&b>0){const r=a*b*1000/v;put("hardResult",`${fmt(r)} mg/L as CaCO₃`);put("hardWork",`(${a} × ${b} × 1,000) / ${v} = ${fmt(r)} mg/L as CaCO₃`)}else{put("hardResult","Enter valid sample volume, EDTA titre and standardized EDTA factor.");put("hardWork","")}
+  }else if(type==="chloride"){
+   const v=num("clV"),a=num("clA"),b=num("clBlank"),n=num("clN");
+   if(v>0&&a!==null&&b!==null&&n>0&&a>=b){const r=(a-b)*n*35450/v;put("clResult",`${fmt(r)} mg/L chloride`);put("clWork",`[(${a} − ${b}) × ${n} × 35,450] / ${v} = ${fmt(r)} mg/L`)}else{put("clResult","Enter valid values; sample titre should be at least the blank titre.");put("clWork","")}
+  }else if(type==="bod"){
+   const d1=num("bodD1"),d2=num("bodD2"),p=num("bodP");
+   if(d1!==null&&d2!==null&&p>0&&p<=1&&d1>=d2){const r=(d1-d2)/p;put("bodResult",`${fmt(r)} mg/L BOD₅`);put("bodWork",`(${d1} − ${d2}) / ${p} = ${fmt(r)} mg/L`)}else{put("bodResult","Enter valid DO values and sample fraction (0–1); initial DO should not be below final DO.");put("bodWork","")}
+  }else if(type==="cod"){
+   const a=num("codA"),b=num("codB"),n=num("codN"),v=num("codV");
+   if(a!==null&&b!==null&&a>=b&&n>0&&v>0){const r=(a-b)*n*8000/v;put("codResult",`${fmt(r)} mg/L COD`);put("codWork",`[(${a} − ${b}) × ${n} × 8,000] / ${v} = ${fmt(r)} mg/L`)}else{put("codResult","Enter valid values; blank titre should be at least sample titre.");put("codWork","")}
+  }
+ };
+ document.querySelectorAll('#detailContent input[type="number"]').forEach(el=>el.addEventListener("input",update));
+ update();
+}
+
+function backToCourse(){
+ document.querySelector("#detail").classList.add("hidden");
+ document.querySelector("#results").classList.remove("hidden");
+ document.querySelector("#results").scrollIntoView({behavior:"smooth"});
+}
+function goHome(){
+ document.querySelector("#detail").classList.add("hidden");
+ document.querySelector("#results").classList.add("hidden");
+ document.querySelector("#courses").classList.remove("hidden");
+ document.querySelector("#home").scrollIntoView({behavior:"smooth"});
+}
+function quick(q){document.querySelector("#globalSearch").value=q;searchNow()}
+function searchNow(){
+ const q=document.querySelector("#globalSearch").value.trim().toLowerCase();
+ if(!q){document.querySelector("#courses").scrollIntoView({behavior:"smooth"});return}
+ const all=[...COURSES.geotech.items.map(e=>({e,course:"geotech"})),...COURSES.water.items.map(e=>({e,course:"water"}))];
+ const found=all.find(x=>(x.e.name+" "+x.e.aim+" "+x.e.keywords.join(" ")).toLowerCase().includes(q));
+ if(found){selectCourse(found.course);setTimeout(()=>openExperiment(COURSES[found.course].items.indexOf(found.e)),100)}
+ else {selectCourse("water")}
+}
+
+</script>
+</body>
+</html>
